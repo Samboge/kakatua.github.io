@@ -1,0 +1,202 @@
+@charset "utf-8";
+
+/***********************************************/
+/* FileName:weapon_sim.css                       */
+/***********************************************/
+*[unselectable="on"]{cursor:default; user-select: none; -moz-user-select: none; -webkit-user-select: none; -ms-user-select: none;}
+body { background-color:#ccc; text-align:left; }
+.wrapper {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:710px;
+	height:420px;
+	margin-left:-360px;
+	margin-top:-215px;
+	padding:5px;
+}
+
+select#weapon_select { width:220px; margin:6px 8px 0; padding:2px; font-size:14px; }
+
+p#weapon_tab {
+	position:relative;
+	background:url(../img/tab_weapon.gif) no-repeat 0 -42px;
+	width:710px;
+	height:21px;
+}
+p#weapon_tab a {
+	position:absolute;
+	background:url(../img/tab_weapon.gif) no-repeat;
+	height:19px;
+	display:block;
+}
+p#weapon_tab a span {
+	position:absolute;
+	width:0;
+	height:0;
+	overflow:hidden;
+}
+
+p#weapon_tab a.tab_bas {
+	left:1px;
+	top:1px;
+	background-position:-1px -1px;
+	width:62px;
+	display:none;
+}
+p#weapon_tab a.tab_bas:hover { background-position:-1px -22px; }
+
+p#weapon_tab a.tab_twn {
+	left:63px;
+	top:1px;
+	background-position:-63px -1px;
+	width:52px;
+}
+p#weapon_tab a.tab_twn:hover { background-position:-63px -22px; }
+
+p#weapon_tab a.tab_bld {
+	left:115px;
+	top:1px;
+	background-position:-115px -1px;
+	width:52px;
+}
+p#weapon_tab a.tab_bld:hover { background-position:-115px -22px; }
+
+p#weapon_tab a.tab_sam {
+	left:167px;
+	top:1px;
+	background-position:-167px -1px;
+	width:52px;
+}
+p#weapon_tab a.tab_sam:hover { background-position:-167px -22px; }
+
+p#weapon_tab a.tab_hmm {
+	left:219px;
+	top:1px;
+	background-position:-219px -1px;
+	width:62px;
+}
+p#weapon_tab a.tab_hmm:hover { background-position:-219px -22px; }
+
+p#weapon_tab a.tab_hrn {
+	left:281px;
+	top:1px;
+	background-position:-281px -1px;
+	width:62px;
+}
+p#weapon_tab a.tab_hrn:hover { background-position:-281px -22px; }
+
+p#weapon_tab a.tab_lnc {
+	left:343px;
+	top:1px;
+	background-position:-343px -1px;
+	width:58px;
+}
+p#weapon_tab a.tab_lnc:hover { background-position:-343px -22px; }
+
+p#weapon_tab a.tab_gnc {
+	left:401px;
+	top:1px;
+	background-position:-401px -1px;
+	width:66px;
+}
+p#weapon_tab a.tab_gnc:hover { background-position:-401px -22px; }
+
+p#weapon_tab a.tab_srk {
+	left:467px;
+	top:1px;
+	background-position:-467px -1px;
+	width:64px;
+}
+p#weapon_tab a.tab_srk:hover { background-position:-467px -22px; }
+
+p#weapon_tab a.tab_lgn {
+	left:531px;
+	top:1px;
+	background-position:-531px -1px;
+	width:70px;
+}
+p#weapon_tab a.tab_lgn:hover { background-position:-531px -22px; }
+
+p#weapon_tab a.tab_hgn {
+	left:601px;
+	top:1px;
+	background-position:-601px -1px;
+	width:70px;
+}
+p#weapon_tab a.tab_hgn:hover { background-position:-601px -22px; }
+
+p#weapon_tab a.tab_bow {
+	left:671px;
+	top:1px;
+	background-position:-671px -1px;
+	width:38px;
+}
+p#weapon_tab a.tab_bow:hover { background-position:-671px -22px; }
+
+
+ul#weapons {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+ul#weapons li {
+	width:670px;
+	padding:5px 20px;
+	position:relative;
+	display:none;
+}
+ul#weapons li#bas { display:block; }
+
+h2 { line-height:20px; font-size:14px; font-weight:bold; text-align:left; }
+
+.left_box { width:200px; padding-right:20px; float:left; }
+.left_box .fig { margin-bottom:6px; }
+.left_box table {}
+.left_box table caption { font-size:14px; font-weight:bold; text-align:left; }
+
+.right_box { width:448px; float:left; }
+.right_box table { width:444px; }
+table, table th, table td { border:solid 2px #aaa; }
+table th { text-align:center; }
+table td { text-align:left; }
+table tr { background-color:#fff; }
+table tr.disabled { background-color:#999; }
+table tr.disabled div, table tr.disabled a { visibility:hidden; }
+table th, table td { color:#222; padding:4px; }
+table thead th { background-color:#000; color:#fff; }
+
+table th.item { width:64px; }
+table th.value {}
+table th.cost { width:48px; }
+
+table .text { background-color:#fff; height:22px; line-height:22px; padding:0 3px; border:1px solid #ccc; text-align:right; color:#000; }
+
+table td.value .slider { height:24px; width:234px; display:inline-block; float:left; position:relative; }
+	.bar { position:absolute; width:160px; height:4px; left:32px; top:9px; background-color:#aaa; border:1px solid #666; cursor: w-resize; }
+	.grip  { position:absolute; width:8px; height:22px; left:27px; top:0px; background-color:#fff; border:1px solid #ccc; cursor:w-resize; }
+	.grip:hover { background-color:#ffc; }
+	div.minus, div.plus  { position:absolute; background:no-repeat center center; width:24px; height:24px; display:block; cursor:pointer; }
+	div.minus { left:0px; background-image:url(../img/btn_minus.gif); }
+	div.plus { right:8px; background-image:url(../img/btn_plus.gif); }
+table td.value .text { width:58px; float:left; }
+
+table td.value .selectLV { padding:4px; }
+	.kireLV { width:290px; height:9px; margin-top:2px; border:1px solid #666; overflow:hidden; position:relative; }
+		.kireLV img{ position:absolute; left:0; top:0; }
+
+table td.cost .text { width:40px; }
+
+table tfoot td { position:relative; background-color:#000; color:#fff; text-align:right; line-height:24px; }
+table tfoot td .text { width:40px; display:inline-block; }
+table tfoot td.costover { background-color:#f00; }
+
+table tfoot .slot{ position:absolute; left:6px; top:6px; overflow:hidden; }
+table tfoot .slot div{ width:20px; height:20px; background:url(../img/slot.png) no-repeat; float:left; margin:0 2px; }
+
+table tfoot .slot div.seal{ background-position:0 0; }
+table tfoot .slot div.seal.on{ background-position:0 -20px; }
+table tfoot .slot div.stone{ background-position:0 -40px; }
+
+p.note { margin-top:4px; font-size:10px; line-height:12px; }
